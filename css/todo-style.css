@@ -1,0 +1,403 @@
+* {
+    font-family: sans-serif;
+    font-weight: normal;
+  }
+  body {
+    margin: 0px; 
+  }
+  .todo-page {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+  }
+  .top {
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    flex-direction: row;
+    height: 40px;
+    background: #346fef;
+  }
+  .left-container {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    background: #346fef;
+  }
+  .app-launcher {
+    background: #346fef;
+    border: #ffe4c40f;
+    color: #ffffff;
+    height: 22px;
+    width: 22px; 
+    margin-right: 10px;
+    margin-top: 8px;
+  }
+  .todo-button {
+    background: #346fef;
+    border: #ffe4c40f;
+    color: #ffffff;
+    font-size: 110%;
+    cursor: pointer;
+  }
+  .right-container {
+    width: 15%;
+    padding: 5px;
+  }
+  .middle {
+    width: 60%
+  }
+  .search-icon {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    padding: 5px;
+    margin-top: 5px;
+  }
+  .plus-icon {
+    height: 30px;
+    width: 20px;
+    position: absolute;
+    border: none;
+    margin-top: auto;
+    background-color: #F2F3F4;
+  }
+  .settings-button {
+    height: 20px;
+    width: 20px;
+    margin-left: 20px;
+  }
+  .help-button {
+    height: 20px;
+    width: 20px;
+    margin-left: 20px;
+  }
+  .profile-button {
+    height: 20px;
+    width: 25px;
+    margin-left: 20px;
+  }
+  .announcements {
+    height: 20px;
+    width: 20px;
+    margin-left: 20px;
+  }
+  .search-bar {
+    width: 380px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 3px;
+    border: inherit;
+    margin-top: 5px;
+    background: #dee5f2f2;
+  }
+  .flex-container {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    height: 530px;
+  }
+  .left {
+    background: #F2F3F4;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+  }
+  .left-top {
+    display: flex;
+    flex-direction: column;
+    height: 210px;
+    width: 95%;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: stretch;
+    padding: 10px;
+  }
+  .myday-button, .planned-button, .assigned-button ,.important-button, .newlist-button, .task-button {
+    background: #F2F3F4;
+    font-size: 85%;
+    border: #F2F3F4;
+    cursor: pointer;
+    padding: 0px 12px;
+    color: #303030b8;
+  }
+  .arrow-icon {
+    height: 70px;
+    width: 40px;
+    font-size: 140%;
+    border: inherit;
+    color: #346fef;
+  }
+  .arrow-icon:active {
+    cursor: pointer;
+  }
+  .myday-icon, .important-icon, .assigned-icon, .planned-icon, .task-icon {
+    height: 15px;
+    width: 15px; 
+    padding: inherit;
+    position: inherit;
+    margin-left: 10px;
+  }
+  .myday:hover, .important:hover, .assignedtome:hover, .planned:hover, .task:hover {
+    background: #ffffff;
+  }
+  .myday-button:hover, .important-button:hover, .assigned-button:hover, .planned-button:hover, .task-button:hover {
+    background: #ffffff;
+  }
+  .myday:active, .important:active, .assignedtome:active, .planned:active, .task:active {
+    background: #A6ACAF;
+  }
+  .myday-button:active, .important-button:active, .assigned-button:active, .planned-button:active, .task-button:active {
+    background: #A6ACAF;
+  }
+  .left-middle {
+    height: 60px;
+    margin-top: 20px;
+    padding: 10px;
+  }
+  .newListButton {
+    background: #ffffff;
+  }
+  .left-bottom {
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+    justify-content: space-between;
+  }
+  .quickicons {
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+  }
+  .right-myday {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  .text {
+    margin: 20px;
+    padding: 20px;
+    font-size: 150%;
+  }
+  .linebox {
+    position: relative;
+    flex: 1 1 0px;
+    display: flex;
+  }
+  .backgroundlines {
+    margin: 0 24px;
+    display: flex;
+    flex: 1;
+    box-shadow: inset 0 1px 0 0 #e5e5e5;
+  }
+  .myday, .assignedtome, .important, .planned, .task {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0;
+  }
+  .newlistbar { 
+    width: 200px;
+    height: 30px;
+    border: none;
+    position: relative;
+    left: 12px;
+    bottom: 18px;
+    background-color: #F2F3F4;
+  }
+  .left-collapsed {
+    display: none;
+    flex-direction: column;
+    background: #F2F3F4;
+    width: 4%;
+    height: 100%;
+    justify-content: space-between;
+  }
+  .linebox {
+    display: flex;
+    flex-direction: column;
+  }
+  .inputline {
+    height: 25px;
+    width: 50%;
+    border-top: none;
+    font-size: 100%;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    position: absolute;
+    left: 20px;
+    
+  }
+  .plus-rightIcon {
+    height: 30px;
+    width: 20px;
+    position: relative;
+    border: none;
+    margin-top: auto;
+    background-color: #ffffff;
+    bottom: 3px;
+  }
+  .right-task {
+    width: 80%;
+    display: none;
+    flex-direction: column;
+  }
+  .right-assigned {
+    width: 80%;
+    display: none;
+    flex-direction: column;
+  }
+  .right-planned {
+    width: 80%;
+    display: none;
+    flex-direction: column;
+  }
+  .right-important {
+    width: 80%;
+    display: none;
+    flex-direction: column;
+  }
+  .p-style {
+    font-size: 15px;
+    color: #346fef;
+    padding: 0;
+    margin: 5px;
+  }
+  .firstdiv {
+    width: 80%;
+    display: none;
+    flex-direction: column;
+  }
+  .firstlist {
+    background: inherit;
+    border: none;
+  }
+  .new-style {
+    color: #346fef;
+  }
+  .new-style {
+    /* list-style-image: url('list.png'); */
+    font-size: 20px;
+    list-style-type: none;
+  }
+  .new-style:marker {
+    height: 20px;
+    width: 20px;
+  }
+  .new-styling {
+    color: #346fef;
+  }
+  .new-styling {
+    background-image: url("list.png");
+    font-size: 20px;
+    list-style-type: none;
+    cursor: pointer;
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    background: transparent;
+    border-width: 0px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 15px;
+    padding-left: 14px;
+  }
+  .new-styling:marker {
+    height: 20px;
+    width: 20px; 
+  }
+  .addingtask {
+    border: none;
+    background-color: #F2F3F4;
+    color: #346fef;
+    position: absolute;
+    font-size: 130%;
+    left: 15px;
+  }
+  .addedtask {
+    border: inherit;
+  }
+  .myDayTask {
+    padding-left: 30px;
+  }
+  .rightCorner {
+    width: 70%;
+  }
+  .leftClick {
+    width: 100%;
+    margin-left: 20px;
+    height: 70px;
+    padding: 20px;
+    font-size: 30px;
+  }
+  .line {
+    border-bottom: 1px solid #CDCACA;
+    margin-top: 55px;
+    width: 100%;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  #putLine {
+    border-bottom: 1px solid #CDCACA;
+    margin-top: 25px;
+    margin-left: 30px;
+  }
+  #add {
+    border: none;
+    background-color: #ffffff;
+    color: blue;
+  }
+  #myDayBox {
+    border: none;
+  }
+  #new-list {
+    position: relative;
+    left: 35px;
+    border: none;
+    background-color: #F2F3F4;
+    padding-top: 5px;
+  }
+  #add-task {
+    position: absolute;
+  }
+  .new-styling-todo{
+    display: inline-block;
+    color: #346fef;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: 10px;
+    border: 0;
+    padding-left: 15px;
+    padding-right: 55px;
+    background-color: #F2F3F4;
+  }
+  .new-styling-todo:hover {
+    background-color: #ffffff;
+  }
+  .left-added-task:hover {
+    background-color: #ffffff;
+  }
+  .list-icon {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 10px;
+    color: #346fef;
+  } 
+  .list-icon:hover {
+    background-color: #ffffff;
+  }
+  .deleteButton{
+    background-color: rgb(87, 140, 255);
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 2px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 3px;
+  }
+  .searchbar:hover {
+    background-color: #ffffff;
+  }
