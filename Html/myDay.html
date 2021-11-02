@@ -1,0 +1,114 @@
+<html>
+
+<head>
+  <title>Todo</title>
+  <link rel="Stylesheet" type="text/css" href="../css/todo-style.css" />
+  <script src="../js/todo-script.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="todo-page">
+    <div class="top">
+      <div class="left-container">
+        <input type="image" src="assets/nine.png" class="app-launcher"> </input>
+        <button class="todo-button">To Do</button>
+      </div>
+      <div class="middle">
+        <input type="image" src="assets/zoom.png" class="search-icon" />
+        <input type="text" class="search-bar" placeholder="      Search" />
+      </div>
+      <div class="right-container">
+        <input type="image" src="assets/icons8-settings.svg" class="settings-button" />
+        <input type="image" src="assets/ques.png" class="help-button" />
+        <input type="image" src="assets/mega.png" class="announcements" />
+        <input type="image" src="assets/hari.png" class="profile-button" />
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="left" id="left">
+        <div class="arrow">
+          <button class="arrow-icon" onclick="arrow()">< </button>
+        </div>
+        <div class="left-top" id="left-top">
+          <div class="myday">
+            <input type="image" src="assets/sun.png" class="myday-icon" />
+            <button id="myDay" value="0" onclick="viewMaker(this)" class="myday-button">My Day</button>
+          </div>
+          <div class="important">
+            <input type="image" src="assets/star.png" class="important-icon" />
+            <button id="important" value="1" onclick="viewMaker(this)" class="important-button">Important</button>
+          </div>
+          <div class="planned">
+            <input type="image" src="assets/calendar.png" class="planned-icon" />
+            <button id="planned" value="2" onclick="viewMaker(this)" class="planned-button">Planned</button>
+          </div>
+          <div class="assignedtome">
+            <input type="image" src="assets/user.png" class="assigned-icon" />
+            <button id="assign" value="3" onclick="viewMaker(this)" class="assigned-button">Assigned To Me</button>
+          </div>
+          <div class="task">
+            <input type="image" src="assets/home.png" class="task-icon" />
+            <button id="task" onclick="viewMaker(this)" class="task-button">Task</button>
+          </div>
+          <div class="task">
+            <input type="image" src="assets/flag.png" class="task-icon" />
+            <button onclick="viewMaker(this)" class="task-button">Flagged mail</button>
+          </div>
+        </div>
+        <div class="left-middle" id="left-middle">
+          <div id="added-task"></div>
+          <div class="insert">
+            <button id="adding-task" onclick="addTodo()" class="addingtask">+</button><input type="text"
+              placeholder="New List" id="new-list" />
+          </div>
+          <div id="added-task" class="addedtask"></div>
+        </div>
+        <div class="left-bottom" id="left-bottom">
+          <input type="image" src="assets/mail.png" class="quickicons" />
+          <input type="image" src="assets/calendar.png" class="quickicons" />
+          <input type="image" src="assets/people.png" class="quickicons" />
+          <input type="image" src="assets/tick.png" class="quickicons" />
+        </div>
+      </div>
+      <div class="left-collapsed" id="leftcollapsed">
+        <button class="arrowicon" onclick="expand()"> > </button>
+        <input type="image" src="assets/sun.png" class="mydayicon" />
+        <input type="image" src="assets/star.png" class="importanticon" />
+        <input type="image" src="assets/calendar.png" class="plannedicon" />
+        <input type="image" src="assets/user.png" class="assignedicon" />
+        <input type="image" src="assets/home.png" class="taskicon" />
+        <input type="image" src="assets/mail.png" class="quickicons" />
+        <input type="image" src="assets/calendar.png" class="quickicons" />
+        <input type="image" src="assets/people.png" class="quickicons" />
+        <input type="image" src="assets/tick.png" class="quickicons" />
+        <input type="image" src="assets/star.png" class="quickicons" />
+      </div>
+      <div class="rightCorner" id="rightSide">
+        <div id="right-top">
+          <div class="rightAppear">
+            <div class="leftClick" id="textBox">
+              <div contenteditable="false" onblur="editValue(this)" id="space">My Day</div>
+            </div>
+          </div>
+          <div class="myDayTask"><button id="add" value="0" onclick="taskInsert(this)">+</button><input type="text"
+              id="myDayBox" placeholder="Add a task" /></div>
+          <div class="new"></div>
+        </div>
+        <div class="lines" id="todoinserter">
+        </div>
+        <div class="new"></div>
+        <div class="lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
