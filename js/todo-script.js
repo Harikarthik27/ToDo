@@ -166,7 +166,6 @@ function rightCheck() {
   var line = document.getElementsByClassName("line");
   console.log(document.getElementById("right-end-title").style.textDecoration)
   if (document.getElementById("right-end-title").style.textDecoration == "none") {
-
     for (var i = 0; i < line.length; i++) {
       if (line[i].innerText == temp) {
         document.getElementById("right-end-title").style.textDecoration="line-through";
@@ -246,14 +245,14 @@ function deleteNextTask(element) {
 // To add the list name in the right panel
 
 function rightHead(element) {
- selectedTodo= toDo[document.getElementById("add").value].tasks[element.getAttribute("index")];
+  selectedTodo= toDo[document.getElementById("add").value].tasks[element.getAttribute("index")];
   document.getElementById("right-end-title").innerText = selectedTodo.taskName;
   if(selectedTodo.selected==true){
     document.getElementById("right-end-title").style.textDecoration="line-through";
     document.getElementsByClassName("right-corner-input")[0].checked=true;
   }
   else{
-     document.getElementById("right-end-title").style.textDecoration="none";
+    document.getElementById("right-end-title").style.textDecoration="none";
     document.getElementsByClassName("right-corner-input")[0].checked=false;
 
   }
@@ -286,8 +285,8 @@ function checkList(element) {
 }
 
 function subtaskInsert(elem) {
-   var newLine = document.createElement("div");
-   var index = document.getElementsByClassName("section-item")[0].getElementsByClassName("sub-line").length;
+  var newLine = document.createElement("div");
+  var index = document.getElementsByClassName("section-item")[0].getElementsByClassName("sub-line").length;
   newLine.setAttribute("contenteditable", "true");
   newLine.setAttribute("onblur", "editValue(this)");
   var x = document.createElement("INPUT");
@@ -313,7 +312,6 @@ function subtaskInsert(elem) {
 }
 
 function checkRightList(element) { 
-  
   var index = element.getAttribute("index");
   var task = document.getElementsByClassName("check-list")[index];
   var strikeOut = document.getElementsByClassName("sub-line")[index];
